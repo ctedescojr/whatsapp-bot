@@ -1,0 +1,14 @@
+{
+  "name": "whatsapp-bot",
+  "version": "2.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Clayton Del Tedesco Júnior",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^18.0.3"
+  }
+}

@@ -1,0 +1,4 @@
+Olá, meu nome é *Clayton Del Tedesco Júnior!*%0a
+
+Como dica, para colocar em negrito as palavras a serem enviadas, coloque um asterisco na frente e atrás da paravra, para pular linha, ditite o símbolo de porcentagem, seguido de zero e da letra a.%0a%0a
+Para mais dicas de formatação, procure a documentação do WhatsApp.
