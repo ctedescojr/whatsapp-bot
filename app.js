@@ -10,7 +10,7 @@ const message_file = '/Message.txt'; //carrega a mensagem a ser enviada
 const path = __dirname + `${message_file}`;
 const filePath = __dirname + `${phoneNumbersFile}`;
 // Telefone que iniciará o processo de envio
-var phone = ["5519982542886"];
+var phone = ["5534999999999"];
 
 //função para delay de abertura de página
 function delay(time){
