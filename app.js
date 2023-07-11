@@ -10,7 +10,7 @@ const message_file = '/Message.txt'; //carrega a mensagem a ser enviada
 const path = __dirname + `${message_file}`;
 const filePath = __dirname + `${phoneNumbersFile}`;
 // Telefone que iniciará o processo de envio
-var phone = ["5511111111111"];
+var phone = [];
 
 //função para delay de abertura de página
 function delay(time){
@@ -47,7 +47,7 @@ function readPhoneNumbersFromFile(filePath) {
 var text = fs.readFileSync(path, 'utf-8');
 
 var missing = 0; //variável auxiliar para contar os números que não foram possíveis o envio
-var index = 0; //variável auxliar para contar os números que foram possíveis o envio
+var index = -2; //variável auxliar para contar os números que foram possíveis o envio
 
 async function robot() {
     const browser = await puppeteer.launch( {headless: false}); //abre o browser
@@ -55,6 +55,7 @@ async function robot() {
 
     
     const phoneNumbers = await readPhoneNumbersFromFile(filePath);
+    phone[0] = phoneNumbers[0]
 
     //faz a primiera interação fora do for, por precisar de autenticação da página do WhatsApp
     await page.goto('https://web.whatsapp.com/send?phone=+'+phone[0]+'&text='+text+'');
