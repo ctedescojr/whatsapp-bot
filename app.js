@@ -10,7 +10,7 @@ const message_file = '/Message.txt'; //carrega a mensagem a ser enviada
 const path = __dirname + `${message_file}`;
 const filePath = __dirname + `${phoneNumbersFile}`;
 // Telefone que iniciará o processo de envio
-var phone = ["5534999999999"];
+var phone = ["5511111111111"];
 
 //função para delay de abertura de página
 function delay(time){
@@ -59,12 +59,12 @@ async function robot() {
     //faz a primiera interação fora do for, por precisar de autenticação da página do WhatsApp
     await page.goto('https://web.whatsapp.com/send?phone=+'+phone[0]+'&text='+text+'');
     console.log("Enviando mensagem para: ",phone[0]);
-    await delay(45000); //delay para logar no WhatsApp --> Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
+    await delay(30000); //delay para logar no WhatsApp --> Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
 
     //Verifica se é possível enviar a mensagem
     if (await page.$("span[data-testid='send']") !== null){
         await page.click("span[data-testid='send']"); //clica no botão para enviar a mensagem
-        await delay(12000); //Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
+        await delay(8000); //Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
         index++;
     }
     //Se não conseguir enviar, avista o usuário no terminal que o número não foi encontrado
@@ -81,7 +81,7 @@ async function robot() {
         //Verifica se é possível enviar a mensagem
         if (await page.$("span[data-testid='send']") !== null){
             await page.click("span[data-testid='send']");
-            await delay(12000); //Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
+            await delay(8000); //Atualize esse valor para um maior no caso do programa não estiver funcionando corretamente
             index++;
         }
         //Se não conseguir enviar, avista o usuário no terminal que o número não foi encontrado
